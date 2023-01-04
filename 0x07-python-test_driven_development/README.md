@@ -7,7 +7,7 @@
 
 ## Example:
 ```
-taiwop@Taiwo-avantgarde$ cat example_ezrapound.txt | tail -20
+avantgarde$ cat example_ezrapound.txt | tail -20
 >>> text = "And New York is the most beautiful city in the world? \
 ... It is not far from it. No urban night is like the night there. \
 ... .. Squares after squares of flame, set up and cut into the aether. Here is our poetry: \
