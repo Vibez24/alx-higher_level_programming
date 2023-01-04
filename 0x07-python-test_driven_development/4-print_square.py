@@ -1,43 +1,21 @@
-#!/usr/bin.python3
-"""
-    This module contains a function that prints a square
-
-    Args:
-        size (int): size of square
-
-    Raises:
-        ValueError: if size is less than 0
-        TypeError: if type or instance of size is not an integer
-    Example:
-        >>> print_square(3)
-        ###
-        ###
-        ###
-"""
+#!/usr/bin/python3
+# 4-print_square.py
+"""Defines a square-printing function."""
 
 
 def print_square(size):
-    """Prints square with '#' character"""
+    """Print a square with the # character.
+    Args:
+        size (int): The height/width of the square.
+    Raises:
+        TypeError: If size is not an integer.
+        ValueError: If size is < 0
+    """
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
 
-    type_err = "size must be an integer"
-    value_err = "size must be >= 0"
-
-    if (not isinstance(size, int)):
-        raise TypeError(type_err)
-
-    if (size < 0):
-        raise ValueError(value_err)
-
-    if (isinstance(size, float) and size < 0):
-        raise TypeError(type_err)
-
-    i = 0
-    while (i < size):
-
-        j = 0
-        while (j < size):
-            print("#", end='')
-            j += 1
-
-        print()
-        i += 1
+    for i in range(size):
+        [print("#", end="") for j in range(size)]
+        print("")
