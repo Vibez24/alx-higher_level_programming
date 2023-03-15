@@ -1,13 +1,20 @@
-const n = parseInt(process.argv[2]);
+#!/usr/bin/node
 
-if (isNaN(n)) {
-  console.log("Missing size");
-} else {
-  for (let i = 0; i < n; i++) {
-    let row = '';
-    for (let j = 0; j < n; j++) {
-      row += 'X';
-    }
-    console.log(row);
+/**
+ * prints a square
+ */
+const userInput = parseInt(process.argv[2]);
+let squareMaker = '';
+
+if (process.argv.length < 3 || isNaN(userInput)) {
+  console.log('Missing size');
+}
+for (let i = 0; i < userInput; i++) {
+  for (let j = 0; j < userInput; j++) {
+    squareMaker += 'X';
+  }
+  if (i !== userInput - 1) {
+    squareMaker += '\n';
   }
 }
+console.log(squareMaker);
